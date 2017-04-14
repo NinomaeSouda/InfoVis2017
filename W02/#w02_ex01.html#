@@ -1,0 +1,3 @@
+
+    var x = Add(4, 3);
+    document.write(x);
