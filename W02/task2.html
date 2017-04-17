@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>W02: Example 07</title>
+  </head>
+  <body>
+    <script src = "vec3.js"></script>
+    <script>
+      var x0, y0, z0;
+      var x1, y1, z1;
+      var x2, y2, z2;
+
+      x0 = 0;
+      x1 = 1;
+      x2 = 2;
+
+      y0 = 0;
+      y1 = 3;
+      y2 = 4;
+
+      z0 = 0;
+      z1 = 5;
+      z2 = 6;
+      
+      var v0 = new Vec3(x0, y0, z0);
+      var v1 = new Vec3(x1, y1, z1);
+      var v2 = new Vec3(x2, y2, z2);
+
+      document.write("v0 = (" + v0.x + ", " + v0.y + ", " + v0.z + ")\n", "v1 = (" + v1.x + ", " + v1.y + ", " + v1.z + ")\n", "v2 = (" + v2.x + ", " + v2.y + ", " + v2.z + ")\n");
+
+      var a_dis = (v0.x - v1.x) * (v0.x - v1.x) + (v0.y - v1.y) * (v0.y - v1.y) + (v0.z - v1.z) * (v0.z - v1.z);
+      var b_dis = (v0.x - v2.x) * (v0.x - v2.x) + (v0.y - v2.y) * (v0.y - v2.y) + (v0.z - v2.z) * (v0.z - v2.z);
+      
+      var ip = (v0.x - v1.x) * (v0.x - v2.x) + (v0.y - v1.y) * (v0.y - v2.y) + (v0.z - v1.z) * (v0.z - v2.z);
+
+      var s = 0.5 * Math.sqrt(a_dis * b_dis - ip * ip);
+      
+      document.write("area = " + s);
+
+
+    </script>
+  </body>
+</html>
